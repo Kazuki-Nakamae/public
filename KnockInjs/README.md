@@ -9,7 +9,7 @@ KnockIn.jsではブラウザ上で動作可能な、KnockIn用のguideRNAおよ�
 
 ##Simple Exsample
 
-HTML5+JavaScript
+###HTML5+JavaScript
 ```html
 <!DOCTYPE html>
 <head>
@@ -53,3 +53,6 @@ writtenHTML+=     "3revprimer : "+      KnockIn.retrievePITChDesign("3revprimer"
 </body>
 </html>
 ```
+
+###OUTPUT
+![simpleexample_result]( "simpleexample_result")
