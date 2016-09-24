@@ -55,5 +55,4 @@ writtenHTML+=     "3revprimer : "+      KnockIn.retrievePITChDesign("3revprimer"
 ```
 
 ###OUTPUT
-Google Chrome ver53.0.2785.116 (64-bit)  
 ![simpleexample_result](https://github.com/Kazuki-Nakamae/public/blob/master/KnockInjs/images/simpleexample_result.jpg "simpleexample_result")
