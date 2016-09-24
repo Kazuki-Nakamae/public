@@ -36,12 +36,15 @@ HTML5+JavaScript
 		KnockIn.createPITChDesign();
 
 		//////////////////Showing the dataset.////////////////////////////////////
-		var writtenHTML="";
-		var shownDataArr=["Direction","gRNAbindingarray","LeftMHarray","RightMHarray","5fwdprimer","5revprimer","3fwdprimer","3revprimer"];
-		for(var desinedDataNo=0;desinedDataNo<shownDataArr.length;desinedDataNo++){
 			//retrievePITChDesign(shownDataType,designedDraftNo)
-			writtenHTML+=shownDataArr[desinedDataNo]+" : "+KnockIn.retrievePITChDesign(shownDataArr[desinedDataNo],0)+"<br><br>";
-		}
+      var writtenHTML=  "gRNA Direction : "+  KnockIn.retrievePITChDesign("Direction",0)+       "<br><br>";
+			writtenHTML+=     "gRNAbindingarray : "+KnockIn.retrievePITChDesign("gRNAbindingarray",0)+"<br><br>";
+      writtenHTML+=     "LeftMHarray : "+     KnockIn.retrievePITChDesign("LeftMHarray",0)+     "<br><br>";
+      writtenHTML+=     "RightMHarray : "+    KnockIn.retrievePITChDesign("RightMHarray",0)+    "<br><br>";
+      writtenHTML+=     "5fwdprimer : "+      KnockIn.retrievePITChDesign("5fwdprimer",0)+      "<br><br>";
+      writtenHTML+=     "5revprimer : "+      KnockIn.retrievePITChDesign("5revprimer",0)+      "<br><br>";
+      writtenHTML+=     "3fwdprimer : "+      KnockIn.retrievePITChDesign("3fwdprimer",0)+      "<br><br>";
+      writtenHTML+=     "3revprimer : "+      KnockIn.retrievePITChDesign("3revprimer",0)+      "<br><br>";
 	</script>
 </head>
 <body>
