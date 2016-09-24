@@ -10,7 +10,7 @@ KnockIn.jsではウェブブラウザ上で動作するようなKnockIn用のgui
 ##Simple Exsample
 
 html
-'''html
+```html
 <!DOCTYPE html>
 <head>
 	<meta charset="utf-8"/>
@@ -35,4 +35,4 @@ html
 	<p id="3ReversePrimer"> </p>
 </body>
 </html>
-'''
+```
