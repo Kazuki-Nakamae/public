@@ -9,7 +9,7 @@ KnockIn.jsではブラウザ上で動作可能な、KnockIn用のguideRNAおよ�
 
 ##Simple Exsample
 
-html+javascript
+HTML5+JavaScript
 ```html
 <!DOCTYPE html>
 <head>
