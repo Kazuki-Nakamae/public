@@ -38,7 +38,7 @@ HTML5+JavaScript
 		//////////////////Showing the dataset.////////////////////////////////////
 			//retrievePITChDesign(shownDataType,designedDraftNo)
       var writtenHTML=  "gRNA Direction : "+  KnockIn.retrievePITChDesign("Direction",0)+       "<br><br>";
-			writtenHTML+=     "gRNAbindingarray : "+KnockIn.retrievePITChDesign("gRNAbindingarray",0)+"<br><br>";
+      writtenHTML+=     "gRNAbindingarray : "+KnockIn.retrievePITChDesign("gRNAbindingarray",0)+"<br><br>";
       writtenHTML+=     "LeftMHarray : "+     KnockIn.retrievePITChDesign("LeftMHarray",0)+     "<br><br>";
       writtenHTML+=     "RightMHarray : "+    KnockIn.retrievePITChDesign("RightMHarray",0)+    "<br><br>";
       writtenHTML+=     "5fwdprimer : "+      KnockIn.retrievePITChDesign("5fwdprimer",0)+      "<br><br>";
