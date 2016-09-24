@@ -48,10 +48,6 @@ writtenHTML+=     "3revprimer : "+      KnockIn.retrievePITChDesign("3revprimer"
 	</script>
 </head>
 <body>
-	<header>
-		<h1>KnockIn.js Demo</h1>
-		<h2>OUTPUT</h2>
-	</header>
 	<p id="result"></p>
 	<script>document.getElementById("result").innerHTML=writtenHTML;//loaded!!!</script>
 </body>
