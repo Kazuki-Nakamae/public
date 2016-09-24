@@ -55,4 +55,4 @@ writtenHTML+=     "3revprimer : "+      KnockIn.retrievePITChDesign("3revprimer"
 ```
 
 ###OUTPUT
-![simpleexample_result](https://github.com/Kazuki-Nakamae/public/blob/master/KnockInjs/images/simpleexample_result.jpg "simpleexample_result")
+![simpleexample_result](https://github.com/Kazuki-Nakamae/public/blob/master/KnockIn.js/images/simpleexample_result.jpg "simpleexample_result")
