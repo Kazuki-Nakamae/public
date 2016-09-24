@@ -1,38 +1,56 @@
 #KnockIn.js
 
-KnockIn.js implements an algorithm to design gRNA targeting sequence and homology arm for KnockIn. It can be used in the browser.
+KnockIn.js implements an algorithm to design gRNAs targeting sequence and homology arms for KnockIn. It can be used in the browser.
 
 Translated:  
-KnockIn.jsではウェブブラウザ上で動作するようなKnockIn用のguideRNAおよびhomologyarm配列検索アルゴリズムを実装しています。
+KnockIn.jsではブラウザ上で動作可能な、KnockIn用のguideRNAおよびhomologyarm配列セットの検索アルゴリズムを実装しています。
 
 ##Download
 
 ##Simple Exsample
 
-html
+html+javascript
 ```html
 <!DOCTYPE html>
 <head>
 	<meta charset="utf-8"/>
 	<title>KnockIn.js Demo</title>
 	<script src="KnockIn-v1.0.7.js"></script>
+	<script>
+		//////////////////Creating 'designCRISPITCh' Class instance///////////////
+		var KnockIn=new	designCRISPITCh();
+
+		//////////////////Setting data////////////////////////////////////////////
+		//setUserData(inputData,inputDataType) or setDesignMethod(inputData,inputDataType)
+		KnockIn.setUserData("demoDesign","title");
+		KnockIn.setUserData("ttttgtggccacactgagccgcgagtgtgagattaagtaatatatatcactccagttttttggccacttcagttttggaccggccccacgaggaacgccaggcacgcttccagtttttaacgcctgccgcgacggccgctcggaaatcgc".toUpperCase(),"sequence");
+		KnockIn.setUserData(0,"shiftedFrameNum");
+		KnockIn.setUserData(56,"targetedPos");
+		KnockIn.setDesignMethod("NGG","PAM");
+		KnockIn.setDesignMethod(20,"LeftMHlen");
+		KnockIn.setDesignMethod(20,"RightMHlen");
+		KnockIn.setDesignMethod("C-insertion","MHMethod");
+		KnockIn.setDesignMethod("EGFP2APuroR","PrimerType");
+
+		//////////////////Designing sequences for KnockIn/////////////////////////
+		KnockIn.createPITChDesign();
+
+		//////////////////Showing the dataset.////////////////////////////////////
+		var writtenHTML="";
+		var shownDataArr=["Direction","gRNAbindingarray","LeftMHarray","RightMHarray","5fwdprimer","5revprimer","3fwdprimer","3revprimer"];
+		for(var desinedDataNo=0;desinedDataNo<shownDataArr.length;desinedDataNo++){
+			//retrievePITChDesign(shownDataType,designedDraftNo)
+			writtenHTML+=shownDataArr[desinedDataNo]+" : "+KnockIn.retrievePITChDesign(shownDataArr[desinedDataNo],0)+"<br><br>";
+		}
+	</script>
 </head>
 <body>
 	<header>
 		<h1>KnockIn.js Demo</h1>
 		<h2>OUTPUT</h2>
 	</header>
-	<p id="designedNum"> </p><br>
-	<p id="gRNA"> </p><br>
-	<p id="PAM direction"> </p><br>
-	<p id="left(5'end) homology arm"> </p><br>
-	<p id="right(3'end) homology arm"> </p><br>
-	<p>The primers of targeting vector construction<br>5'end</p><br>
-	<p id="5ForwardPrimer"> </p><br>
-	<p id="5reversePrimer"> </p><br>
-	<p>3'end</p><br>
-	<p id="3ForwardPrimer"> </p><br>
-	<p id="3ReversePrimer"> </p>
+	<p id="result"></p>
+	<script>document.getElementById("result").innerHTML=writtenHTML;//loaded!!!</script>
 </body>
 </html>
 ```
