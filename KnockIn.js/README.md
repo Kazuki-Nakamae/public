@@ -46,4 +46,4 @@ writtenHTML+=     "Right microhomology array : "+KnockIn.retrievePITChDesign("Ri
 ###OUTPUT
 Google Chrome ver53.0.2785.116 (64-bit)
 
-![simpleexample_result](https://github.com/Kazuki-Nakamae/public/blob/master/KnockIn.js/images/SEresult.jpg "simpleexample_result")
+![simpleexample_result](https://github.com/Kazuki-Nakamae/public/blob/master/KnockIn.js/images/simpleresult.jpg "simpleresult")
