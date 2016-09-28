@@ -15,7 +15,7 @@ KnockIn.jsではブラウザ上で動作可能な、KnockIn用のguideRNAおよ�
 <head>
 	<meta charset="utf-8"/>
 	<title>KnockIn.js Demo</title>
-	<script src="KnockIn-v1.0.7.js"></script>
+	<script src="KnockIn-v1.0.10.js"></script>
 	<script>
 //////////////////Creating 'designCRISPITCh' Class instance///////////////
 var KnockIn=new	designCRISPITCh();
@@ -30,10 +30,10 @@ KnockIn.createPITChDesign();
 
 //////////////////Showing the dataset.////////////////////////////////////
 //retrievePITChDesign(shownDataType,designedDraftNo)
-var writtenHTML=  "gRNA Direction : "+  					KnockIn.retrievePITChDesign("Direction",0)+       "<br><br>";
-writtenHTML+=     "gRNA binding array : "+				KnockIn.retrievePITChDesign("gRNAbindingarray",0)+"<br><br>";
-writtenHTML+=     "Left microhomology array : "+  KnockIn.retrievePITChDesign("LeftMHarray",0)+     "<br><br>";
-writtenHTML+=     "Right microhomology array : "+ KnockIn.retrievePITChDesign("RightMHarray",0)+    "<br><br>";
+var writtenHTML=  "gRNA Direction : "+KnockIn.retrievePITChDesign("Direction",0)+       "<br><br>";
+writtenHTML+=     "gRNA binding array : "+KnockIn.retrievePITChDesign("gRNAbindingarray",0)+"<br><br>";
+writtenHTML+=     "Left microhomology array : "+KnockIn.retrievePITChDesign("LeftMHarray",0)+     "<br><br>";
+writtenHTML+=     "Right microhomology array : "+KnockIn.retrievePITChDesign("RightMHarray",0)+    "<br><br>";
 	</script>
 </head>
 <body>
