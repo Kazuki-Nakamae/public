@@ -21,14 +21,14 @@ KnockIn.jsではブラウザ上で動作可能な、KnockIn用のguideRNAおよ�
 var KnockIn=new	designCRISPITCh();
 
 //////////////////Setting data////////////////////////////////////////////
-//setUserData(inputData,inputDataType) or setDesignMethod(inputData,inputDataType)
+//setUserData(inputData,inputDataType)
 KnockIn.setUserData("ttttgtggccacactgagccgcgagtgtgagattaagtaatatatatcactccagttttttggccacttcagttttggaccggccccacgaggaacgccaggcacgcttccagtttttaacgcctgccgcgacggccgctcggaaatcgc".toUpperCase(),"sequence");
 KnockIn.setUserData(56,"targetedPos");
 
 //////////////////Designing sequences for KnockIn/////////////////////////
 KnockIn.createPITChDesign();
 
-//////////////////Showing the dataset.////////////////////////////////////
+//////////////////Showing the designed dataset.////////////////////////////////////
 //retrievePITChDesign(shownDataType,designedDraftNo)
 var writtenHTML=  "gRNA Direction : "+KnockIn.retrievePITChDesign("Direction",0)+       "<br><br>";
 writtenHTML+=     "gRNA binding array : "+KnockIn.retrievePITChDesign("gRNAbindingarray",0)+"<br><br>";
