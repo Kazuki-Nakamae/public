@@ -31,9 +31,9 @@ KnockIn.createPITChDesign();
 //////////////////Showing the dataset.////////////////////////////////////
 //retrievePITChDesign(shownDataType,designedDraftNo)
 var writtenHTML=  "gRNA Direction : "+  KnockIn.retrievePITChDesign("Direction",0)+       "<br><br>";
-writtenHTML+=     "gRNAbindingarray : "+KnockIn.retrievePITChDesign("gRNAbindingarray",0)+"<br><br>";
-writtenHTML+=     "LeftMHarray : "+     KnockIn.retrievePITChDesign("LeftMHarray",0)+     "<br><br>";
-writtenHTML+=     "RightMHarray : "+    KnockIn.retrievePITChDesign("RightMHarray",0)+    "<br><br>";
+writtenHTML+=     "gRNA binding array : "+KnockIn.retrievePITChDesign("gRNAbindingarray",0)+"<br><br>";
+writtenHTML+=     "Left microhomology array : "+     KnockIn.retrievePITChDesign("LeftMHarray",0)+     "<br><br>";
+writtenHTML+=     "Right microhomology array : "+    KnockIn.retrievePITChDesign("RightMHarray",0)+    "<br><br>";
 	</script>
 </head>
 <body>
