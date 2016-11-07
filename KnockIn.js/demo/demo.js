@@ -1,29 +1,3 @@
-#KnockIn.js
-
-KnockIn.js implements an algorithm to design gRNAs targeting sequence and homology arms for KnockIn. It can be used in the browser.
-
-Translated:  
-KnockIn.jsではブラウザ上で動作可能な、KnockIn用のguideRNAおよびhomologyarm配列セットの検索アルゴリズムを実装しています。
-
-##Download
-
-##Simple Exsample
-
-###HTML5(demo.html)
-```html
-<!DOCTYPE html>
-<head>
-	<meta charset="utf-8"/>
-	<script src="../src/knockinjs.js"></script>
-</head>
-<body>
-	<p id="result"></p>
-	<script src="demo.js"></script>
-</body>
-</html>
-```
-###JavaScript(demo.js)
-```js
 //Creating 'designCRISPITCh' Class instance
 var KnockIn=new	designCRISPITCh(
   //title
@@ -46,11 +20,3 @@ var writtenHTML="RESULT<br><br>"
 +"Right microhomology array : "+KnockIn.retrieveDesign("RightMHarray",0)+"<br><br>"
 //show result
 document.getElementById("result").innerHTML=writtenHTML;
-```
-
-###OUTPUT
-Google Chrome ver53.0.2785.116 (64-bit)
-
-![simpleexample_result](https://github.com/Kazuki-Nakamae/public/blob/master/KnockIn.js/images/simpleresult.jpg "simpleresult")
-
-[DEMO page](https://codepen.io/nakazu/pen/jVEePj)
