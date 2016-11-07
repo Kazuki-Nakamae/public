@@ -15,25 +15,28 @@ KnockIn.jsではブラウザ上で動作可能な、KnockIn用のguideRNAおよ�
 <head>
 	<meta charset="utf-8"/>
 	<title>KnockIn.js Demo</title>
-	<script src="KnockIn-v1.0.10.js"></script>
+	<script src="../src/knockinjs.js"></script>
 	<script>
-//////////////////Creating 'designCRISPITCh' Class instance///////////////
-var KnockIn=new	designCRISPITCh();
-
-//////////////////Setting data////////////////////////////////////////////
-//setUserData(inputData,inputDataType)
-KnockIn.setUserData("ttttgtggccacactgagccgcgagtgtgagattaagtaatatatatcactccagttttttggccacttcagttttggaccggccccacgaggaacgccaggcacgcttccagtttttaacgcctgccgcgacggccgctcggaaatcgc".toUpperCase(),"sequence");
-KnockIn.setUserData(56,"targetedPos");
-
-//////////////////Designing sequences for KnockIn/////////////////////////
-KnockIn.createPITChDesign();
-
-//////////////////Showing the designed dataset.////////////////////////////////////
-//retrievePITChDesign(shownDataType,designedDraftNo)
-var writtenHTML=  "gRNA Direction : "+KnockIn.retrievePITChDesign("Direction",0)+       "<br><br>";
-writtenHTML+=     "gRNA binding array : "+KnockIn.retrievePITChDesign("gRNAbindingarray",0)+"<br><br>";
-writtenHTML+=     "Left microhomology array : "+KnockIn.retrievePITChDesign("LeftMHarray",0)+     "<br><br>";
-writtenHTML+=     "Right microhomology array : "+KnockIn.retrievePITChDesign("RightMHarray",0)+    "<br><br>";
+		//Creating 'designCRISPITCh' Class instance
+		var KnockIn=new	designCRISPITCh(
+			//title
+			"AAVS1",
+			//target sequences
+			"GAATTCCTAACTGCCCCGGGGCAGTCTGCTATTCATCCCCTTTACGCGGTGCTACACACACTTGCTAGTATGCCGTGGGGACCCCTCCGGCCTGTAGACTCCATTTCCCAGCATTCCCCGGAGGAGGCCCTCATCTGGCGATTTCCACTGGGGGCCTCGGAGCTGCGGACTTCCCAGTGTGCATCGGGGCACAGCGACTCCTGGAAGTGGCCACTTCTGCTAATGGACTCCATTTCCCAGGCTCCCGCTACCTGCCCAGCACACCCTGGGGCATCCGTGACGTCAGCAAGCCGGGCGGGGACCGGAGATCCTTGGGGCGGTGGGGGGCCAGCGGCAGTTCCCAGGCGGCC",
+			//reading frame(0-2)
+			0,
+			//target position
+			75
+		);
+		//Designing sequences for KnockIn
+		KnockIn.createDesign();
+		//Showing the dataset.
+		//retrievePITChDesign(shownDataType,designedDraftNo)
+		var writtenHTML="RESULT<br><br>"
+		+"gRNA Direction : "+KnockIn.retrieveDesign("Direction",0)+"<br><br>"
+		+"gRNA binding array : "+KnockIn.retrieveDesign("gRNAbindingarray",0)+"<br><br>"
+		+"Left microhomology array : "+KnockIn.retrieveDesign("LeftMHarray",0)+"<br><br>"
+		+"Right microhomology array : "+KnockIn.retrieveDesign("RightMHarray",0)+"<br><br>"
 	</script>
 </head>
 <body>
@@ -48,4 +51,4 @@ Google Chrome ver53.0.2785.116 (64-bit)
 
 ![simpleexample_result](https://github.com/Kazuki-Nakamae/public/blob/master/KnockIn.js/images/simpleresult.jpg "simpleresult")
 
-[Let's see DEMO page](https://codepen.io/nakazu/pen/jVEePj)
+[DEMO page](https://codepen.io/nakazu/pen/jVEePj)
