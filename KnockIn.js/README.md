@@ -26,7 +26,7 @@ KnockIn.js implements an algorithm to design gRNAs targeting sequence and homolo
 var KnockIn=new	designCRISPITCh(
   //title
   "AAVS1",
-  //target sequences
+  //target sequence
   "GAATTCCTAACTGCCCCGGGGCAGTCTGCTATTCATCCCCTTTACGCGGTGCTACACACACTTGCTAGTATGCCGTGGGGACCCCTCCGGCCTGTAGACTCCATTTCCCAGCATTCCCCGGAGGAGGCCCTCATCTGGCGATTTCCACTGGGGGCCTCGGAGCTGCGGACTTCCCAGTGTGCATCGGGGCACAGCGACTCCTGGAAGTGGCCACTTCTGCTAATGGACTCCATTTCCCAGGCTCCCGCTACCTGCCCAGCACACCCTGGGGCATCCGTGACGTCAGCAAGCCGGGCGGGGACCGGAGATCCTTGGGGCGGTGGGGGGCCAGCGGCAGTTCCCAGGCGGCC",
   //reading frame(0-2)
   0,
@@ -52,3 +52,56 @@ Google Chrome ver53.0.2785.116 (64-bit)
 ![simpleexample_result](https://github.com/Kazuki-Nakamae/public/blob/master/KnockIn.js/images/simpleresult.jpg "simpleresult")
 
 [DEMO page](https://codepen.io/nakazu/pen/jVEePj)
+
+
+##Tutorial
+We introduce the users to the basic workflow of KnockIn.js. You can design sequences by running the programs without external library.
+
+###1.Setting sequence
+First, you create a 'designCRISPITCh' instance using `var <instance> new	designCRISPITCh()`
+```
+Usage: designCRISPITCh(inputTitle, inputSeq, shiftedFrameNum, inputtargetedPos)
+
+ create instance and set sequence and targeting data using KnockIn design
+
+Arguments:
+ inputTitle				<String global object>	Title (default: "no_title")
+ inputSeq					<String global object>	Target sequence (default: "")
+																					NOTE: >100bp is recommended
+ shiftedFrameNum	<0|1|2>									Reading frame (default: 0)
+ inputtargetedPos	<Number:integer>				Target position (default: 41)
+```
+
+You can change the input data using `<instance>.setData()` method
+```
+Usage: setData(inputData, inputDataType)
+
+ change the input sequence and targeting data using KnockIn design
+
+Arguments:
+ inputData				<String global object|Number>													Setting value
+ inputDataType		<"title"|"sequence"|"shiftedFrameNum"|"targetedPos">	Type of data
+ 										"title"						-- Title
+										"sequence"				-- Target sequence
+										"shiftedFrameNum"	-- Reading frames
+										"targetedPos"			-- Target position
+```
+
+###2.Setting design method
+
+You set the design method using `<instance>.setMethod()` method
+```
+Usage: setMethod(inputData, inputDataType)
+
+ change the input sequence and targeting data using KnockIn design
+
+Arguments:
+ inputData				<Array global object|String global object|Number>					Setting value
+ inputDataType		<"PAM"|"LeftMHlen"|"RightMHlen"|"MHMethod"|"PrimerType">	Type of data
+ 										"PAM"					-- PAM sequense array
+										"LeftMHlen"		-- The length of left microhomology
+										"RightMHlen"	-- The length of right microhomology
+																			NOTE: >10-40bp is recommended
+										"MHMethod"		-- Microhomology arms design method 					inputData:<"codon-deletion"|"C-insertion">
+										"PrimerType"	-- Primer type for Knock-in Targeting Vector 	inputData:<"EGFP2APuroR"|"CMV-EGFP2APuroR">
+```
