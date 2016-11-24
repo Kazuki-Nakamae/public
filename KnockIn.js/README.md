@@ -65,11 +65,11 @@ Usage: designCRISPITCh(inputTitle, inputSeq, shiftedFrameNum, inputtargetedPos)
  create instance and set sequence and targeting data using KnockIn design
 
 Arguments:
- inputTitle				<String global object>	Title (default: "no_title")
- inputSeq					<String global object>	Target sequence (default: "")
-																					NOTE: >100bp is recommended
- shiftedFrameNum	<0|1|2>									Reading frame (default: 0)
- inputtargetedPos	<Number:integer>				Target position (default: 41)
+ inputTitle      <String global object>	Title (default: "no_title")
+ inputSeq        <String global object>	Target sequence (default: "")
+                                         NOTE: >100bp is recommended
+ shiftedFrameNum <0|1|2>                Reading frame (default: 0)
+ inputtargetedPos <Number:integer>      Target position (default: 41)
 ```
 
 You can change the input data using `<instance>.setData()` method
@@ -79,12 +79,12 @@ Usage: setData(inputData, inputDataType)
  change the input sequence and targeting data using KnockIn design
 
 Arguments:
- inputData				<String global object|Number>													Setting value
- inputDataType		<"title"|"sequence"|"shiftedFrameNum"|"targetedPos">	Type of data
- 										"title"						-- Title
-										"sequence"				-- Target sequence
-										"shiftedFrameNum"	-- Reading frames
-										"targetedPos"			-- Target position
+ inputData     <String global object|Number>                        Setting value
+ inputDataType <"title"|"sequence"|"shiftedFrameNum"|"targetedPos"> Type of data
+                    "title"           -- Title
+                    "sequence"        -- Target sequence
+                    "shiftedFrameNum" -- Reading frames
+                    "targetedPos"     -- Target position
 ```
 
 ###2.Setting design method
@@ -96,12 +96,12 @@ Usage: setMethod(inputData, inputDataType)
  change the input sequence and targeting data using KnockIn design
 
 Arguments:
- inputData				<Array global object|String global object|Number>					Setting value
- inputDataType		<"PAM"|"LeftMHlen"|"RightMHlen"|"MHMethod"|"PrimerType">	Type of data
- 										"PAM"					-- PAM sequense array
-										"LeftMHlen"		-- The length of left microhomology
-										"RightMHlen"	-- The length of right microhomology
-																			NOTE: >10-40bp is recommended
-										"MHMethod"		-- Microhomology arms design method 					inputData:<"codon-deletion"|"C-insertion">
-										"PrimerType"	-- Primer type for Knock-in Targeting Vector 	inputData:<"EGFP2APuroR"|"CMV-EGFP2APuroR">
+ inputData     <Array global object|String global object|Number>        Setting value
+ inputDataType <"PAM"|"LeftMHlen"|"RightMHlen"|"MHMethod"|"PrimerType"> Type of data
+                    "PAM"         -- PAM sequense array
+                    "LeftMHlen"   -- The length of left microhomology
+                    "RightMHlen"  -- The length of right microhomology
+                                     NOTE: >10-40bp is recommended
+                    "MHMethod"    -- Microhomology arms design method          inputData:<"codon-deletion"|"C-insertion">
+                    "PrimerType"  -- Primer type for Knock-in Targeting Vector inputData:<"EGFP2APuroR"|"CMV-EGFP2APuroR">
 ```
