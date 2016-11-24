@@ -106,23 +106,20 @@ Arguments:
                     "PrimerType"  -- Primer type for Knock-in Targeting Vector inputData:<"EGFP2APuroR"|"CMV-EGFP2APuroR">
 ```
 
-The design program will not work without setting the design method. We recommend checking setting using `<instance>.hasMethod()` method.If this is okay, the method returns `true`.
+The design program will not work without setting the design method. We recommend checking method setting using `<instance>.hasMethod()` method. If this is okay, the method returns `true`.
 
-###3.Setting design method
+###3.designing sequences
 
-You set the design method using `<instance>.setMethod()` method
+You can design sequences for KnockIn using `<instance>.createDesign()` method
 ```
-Usage: setMethod(inputData, inputDataType)
+Usage: createDesign(requestedDraftNum)
 
- change the input sequence and targeting data using KnockIn design
+ search gRNA targeting site and design microhomology
 
 Arguments:
- inputData     <Array global object|String global object|Number>        Setting value
- inputDataType <"PAM"|"LeftMHlen"|"RightMHlen"|"MHMethod"|"PrimerType"> Type of data
-                    "PAM"         -- PAM sequense array
-                    "LeftMHlen"   -- The length of left microhomology
-                    "RightMHlen"  -- The length of right microhomology
-                                     NOTE: >10-40bp is recommended
-                    "MHMethod"    -- Microhomology arms design method          inputData:<"codon-deletion"|"C-insertion">
-                    "PrimerType"  -- Primer type for Knock-in Targeting Vector inputData:<"EGFP2APuroR"|"CMV-EGFP2APuroR">
+ requestedDraftNum <Number:integer> The number of searching gRNA targeting sites
 ```
+
+####Explanation Of Design Algorithm
+
+In preparation ...
