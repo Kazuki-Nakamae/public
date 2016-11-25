@@ -125,7 +125,7 @@ Arguments:
 ![searchgrna](https://github.com/Kazuki-Nakamae/public/blob/master/KnockIn.js/images/searchgrna.jpg "searchgrna")
 
 This program searches PAM sequences ± 6bp from target site and design microhomology arms in accordance with the design method.
-For the detailed explanation, please refer to the ，"[PITCh KnockIn](https://codepen.io/nakazu/pen/jVEePj)" page.
+For the detailed explanation, please refer to the "[PITCh KnockIn](https://codepen.io/nakazu/pen/jVEePj)" page.
 
 ###4.Showing Result
 
@@ -153,4 +153,45 @@ Arguments:
 									 "5vector"          -- 5'side sequense of donor vector               <Array global object>
 									 "3vector"          -- 3'side sequense of donor vector               <Array global object>
  designedDraftNo <Number:integer> id number in design dataset(from 0)
+```
+
+###Supplements
+
+####List Of Classess and function in KnockIn.js
+
+KnockIn.js has many methods. For the detailed explanation, please refer to the source code.
+
+#####Function
+```
+setInherits(childCtor,parentCtor)
+```
+#####"inputSequence" Class
+```
+//Constructor
+inputSequence(inputTitle,inputSeq,shiftedFrameNum,inputtargetedPos)
+//Methods
+inputSequence.setData(inputData,inputDataType)
+inputSequence.getData(getDataType)
+inputSequence.makeData_(getDataType)
+inputSequence.retrieveData(getDataType)
+inputSequence.getCompBase(inputBase,getNucType)
+inputSequence.isSameBase_(inputBase,refBase)
+inputSequence.convertCodon(inputCodon)
+```
+#####"designCRISPITCh" Class(subclass from "inputSequence" Class)
+```
+//Constructor
+designCRISPITCh(inputTitle,inputSeq,shiftedFrameNum,inputtargetedPos)
+//Methods
+designCRISPITCh.setMethod(inputData,inputDataType)
+designCRISPITCh.hasMethod()
+designCRISPITCh.getMethod(getDataType)
+designCRISPITCh.setDesign(inputData,inputDataType,designedDraftNo)
+designCRISPITCh.clearDesign()
+designCRISPITCh.getDesign_(getDataType,designedDraftNo)
+designCRISPITCh..makeDesign_(makeDataType,designedDraftNo)
+designCRISPITCh.retrieveDesign(getDataType,designedDraftNo)
+designCRISPITCh.hasAllDesign(designedDraftNo,exeptedDataList)
+designCRISPITCh.recognizePAM_(searchPos,designDirection)
+designCRISPITCh.createDesign(requestedDraftNum)
 ```
