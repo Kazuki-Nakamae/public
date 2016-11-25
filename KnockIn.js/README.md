@@ -57,7 +57,7 @@ Google Chrome ver53.0.2785.116 (64-bit)
 ##Tutorial
 We introduce the users to the basic workflow of KnockIn.js. You can design sequences by running the programs without external library.
 
-###1.Setting sequence
+###1.Setting Sequence
 First, you create a 'designCRISPITCh' instance using `var <instance> new	designCRISPITCh()`
 ```
 Usage: designCRISPITCh(inputTitle, inputSeq, shiftedFrameNum, inputtargetedPos)
@@ -87,7 +87,7 @@ Arguments:
                     "targetedPos"     -- Target position
 ```
 
-###2.Setting design method
+###2.Setting Design Method
 
 You set the design method using `<instance>.setMethod()` method
 ```
@@ -108,7 +108,7 @@ Arguments:
 
 The design program will not work without setting the design method. We recommend checking method setting using `<instance>.hasMethod()` method. If this is okay, the method returns `true`.
 
-###3.designing sequences
+###3.Designing Sequences
 
 You can design sequences for KnockIn using `<instance>.createDesign()` method
 ```
@@ -117,9 +117,9 @@ Usage: createDesign(requestedDraftNum)
  search gRNA targeting site and design microhomology
 
 Arguments:
- requestedDraftNum <Number:integer> The number of searching gRNA targeting sites
+ requestedDraftNum <Number:integer> The number of searching gRNA targeting sites (default: 10000)
 ```
 
-####Explanation Of Design Algorithm
+####Design Algorithm
 
-In preparation ...
+![simpleexample_result](https://github.com/Kazuki-Nakamae/public/blob/master/KnockIn.js/images/simpleresult.jpg "simpleresult")
