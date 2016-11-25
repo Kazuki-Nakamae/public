@@ -138,7 +138,7 @@ Usage: retrieveDesign(getDataType,designedDraftNo)
 
 Arguments:
  getDataType     <Array global object|String global object|Number> type of data
-                   "Direction"        -- Direction of gRNA sequences                   <"plus"|"minus">
+									 "Direction"        -- Direction of gRNA sequences                   <"plus"|"minus">
 									 "PAMendPos"        -- Position of 5'end PAM sequense                <Number>
 									 "gRNAendPos"       -- Position of 3'end gRNA sequense               <Number>
 									 "CutPos"           -- Position 3bp downstream from "PAMendPos"      <Number>
