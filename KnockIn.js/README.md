@@ -122,4 +122,35 @@ Arguments:
 
 ####Design Algorithm
 
-|||![searchgrna](https://github.com/Kazuki-Nakamae/public/blob/master/KnockIn.js/images/searchgrna.jpg "searchgrna")||
+![searchgrna](https://github.com/Kazuki-Nakamae/public/blob/master/KnockIn.js/images/searchgrna.jpg "searchgrna")
+
+This program searches PAM sequences ± 6bp from target site and design microhomology arms in accordance with the design method.
+For the detailed explanation, please refer to the ，"[PITCh KnockIn](https://codepen.io/nakazu/pen/jVEePj)" page.
+
+###4.Showing Result
+
+You can get result using `<instance>.retrieveDesign()` method.
+
+```
+Usage: retrieveDesign(getDataType,designedDraftNo)
+
+ get design results
+
+Arguments:
+ getDataType     <Array global object|String global object|Number> type of data
+                   "Direction"        -- Direction of gRNA sequences                   <"plus"|"minus">
+									 "PAMendPos"        -- Position of 5'end PAM sequense                <Number>
+									 "gRNAendPos"       -- Position of 3'end gRNA sequense               <Number>
+									 "CutPos"           -- Position 3bp downstream from "PAMendPos"      <Number>
+									 "gRNAbindingarray" -- PAM and spacer sequense array                 <Array global object>
+									 "LeftMHarray"      -- Left microhomology sequense array             <Array global object>
+									 "RightMHarray"     -- Right microhomology sequense array            <Array global object>
+									 "Seq"              -- Sequense around target site                   <Array global object>
+									 "5fwdprimer"       -- Forward primer for making left microhomology  <Array global object>
+									 "5revprimer"       -- Reverse primer for making left microhomology  <Array global object>
+									 "3fwdprimer"       -- Forward primer for making right microhomology <Array global object>
+									 "3revprimer"       -- Reverse primer for making right microhomology <Array global object>
+									 "5vector"          -- 5'side sequense of donor vector               <Array global object>
+									 "3vector"          -- 3'side sequense of donor vector               <Array global object>
+ designedDraftNo <Number:integer> id number in design dataset(from 0)
+```
