@@ -124,7 +124,7 @@ Arguments:
 
 ![searchgrna](https://github.com/Kazuki-Nakamae/public/blob/master/KnockIn.js/images/searchgrna.jpg "searchgrna")
 
-This program searches PAM sequences ± 6bp from target site and design microhomology arms in accordance with the design method.
+This program searches PAM sequences in target site ± 6bp and design microhomology arms in accordance with the design method.
 For the detailed explanation, please refer to the "[PITCh KnockIn](https://codepen.io/nakazu/pen/jVEePj)" page.
 
 ###4.Showing Result
