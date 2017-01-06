@@ -1,11 +1,11 @@
 #KnockIn.js
 
-KnockIn.js implements an algorithm to design gRNAs targeting sequence and homology arms for KnockIn. It can be used in the browser.
+KnockIn.js implements an algorithm to design target sequence of sgRNA and homology arms for KnockIn. It can be used in the browser.
 
 
 ##Download
 
-##Simple Exsample
+##Simple Example
 
 ###HTML5(demo.html)
 ```html
@@ -55,10 +55,10 @@ Google Chrome ver53.0.2785.116 (64-bit)
 
 
 ##Tutorial
-We introduce the users to the basic workflow of KnockIn.js. You can design sequences by running the programs without external library.
+Followings are the basic workflow of KnockIn.js. You can design sequences by running the programs without external library.
 
 ###1.Setting Sequence
-First, you create a 'designCRISPITCh' instance using `var <instance> new	designCRISPITCh()`
+Create a 'designCRISPITCh' instance using `var <instance> new	designCRISPITCh()`
 ```
 Usage: designCRISPITCh(inputTitle, inputSeq, shiftedFrameNum, inputtargetedPos)
 
@@ -89,7 +89,7 @@ Arguments:
 
 ###2.Setting Design Method
 
-You set the design method using `<instance>.setMethod()` method
+Set the design method using `<instance>.setMethod()` method
 ```
 Usage: setMethod(inputData, inputDataType)
 
@@ -110,7 +110,7 @@ The design program will not work without setting the design method. We recommend
 
 ###3.Designing Sequences
 
-You can design sequences for KnockIn using `<instance>.createDesign()` method
+Design sequences for KnockIn using `<instance>.createDesign()` method
 ```
 Usage: createDesign(requestedDraftNum)
 
@@ -124,12 +124,12 @@ Arguments:
 
 ![searchgrna](https://github.com/Kazuki-Nakamae/public/blob/master/KnockIn.js/images/searchgrna.jpg "searchgrna")
 
-This program searches PAM sequences in target site ± 6bp and design microhomology arms in accordance with the design method.
+This program searches PAM sequences within the range of 6 bp for both upstream and downstream of selected base and designs microhomology arms in accordance with the design method.
 For the detailed explanation, please refer to the "[PITCh KnockIn](https://codepen.io/nakazu/pen/jVEePj)" page.
 
 ###4.Showing Result
 
-You can get result using `<instance>.retrieveDesign()` method.
+Get result using `<instance>.retrieveDesign()` method.
 
 ```
 Usage: retrieveDesign(getDataType,designedDraftNo)
