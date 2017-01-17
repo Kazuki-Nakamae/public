@@ -93,7 +93,7 @@ Set the design method using `<instance>.setMethod()` method
 ```
 Usage: setMethod(inputData, inputDataType)
 
- change the input sequence and targeting data using KnockIn design
+ change the CRISPITCh design method
 
 Arguments:
  inputData     <Array global object|String global object|Number>        Setting value
