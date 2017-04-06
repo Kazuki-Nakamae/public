@@ -5,6 +5,10 @@ KnockIn.js implements an algorithm to design target sequence of sgRNA and homolo
 
 ##Download
 
+Enter `git clone http://github.com/Kazuki-Nakamae/public.git`
+This will clone the git repository on your system.
+Make sure git is installed on your system. If not, enter `sudo apt-get install git`.
+
 ##Simple Example
 
 ###HTML5(demo.html)
