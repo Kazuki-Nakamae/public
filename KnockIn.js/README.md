@@ -125,7 +125,7 @@ Arguments:
 ![searchgrna](https://github.com/Kazuki-Nakamae/public/blob/master/KnockIn.js/images/searchgrna.jpg "searchgrna")
 
 This program searches PAM sequences within the range of 6 bp for both upstream and downstream of selected base and designs microhomology arms in accordance with the design method.
-For the detailed explanation, please refer to the "[PITCh KnockIn](https://codepen.io/nakazu/pen/jVEePj)" page.
+For the detailed explanation, please refer to the "[PITCh KnockIn](http://www.mls.sci.hiroshima-u.ac.jp/smg/PITChdesigner/index.html)" page.
 
 ###4.Showing Result
 
