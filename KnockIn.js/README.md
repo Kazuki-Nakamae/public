@@ -3,15 +3,15 @@
 KnockIn.js implements an algorithm to design target sequence of sgRNA and homology arms for KnockIn. It can be used in the browser.
 
 
-##Download
+## Download
 
 Enter `git clone http://github.com/Kazuki-Nakamae/public.git`
 This will clone the git repository on your system.
 Make sure git is installed on your system. If not, enter `sudo apt-get install git`.
 
-##Simple Example
+## Simple Example
 
-###HTML5(demo.html)
+### HTML5(demo.html)
 ```html
 <!DOCTYPE html>
 <head>
@@ -24,7 +24,7 @@ Make sure git is installed on your system. If not, enter `sudo apt-get install g
 </body>
 </html>
 ```
-###JavaScript(demo.js)
+### JavaScript(demo.js)
 ```js
 //Creating 'designCRISPITCh' Class instance
 var KnockIn=new	designCRISPITCh(
@@ -50,7 +50,7 @@ var writtenHTML="RESULT<br><br>"
 document.getElementById("result").innerHTML=writtenHTML;
 ```
 
-###OUTPUT
+### OUTPUT
 Google Chrome ver53.0.2785.116 (64-bit)
 
 ![simpleexample_result](https://github.com/Kazuki-Nakamae/public/blob/master/KnockIn.js/images/simpleresult.jpg "simpleresult")
@@ -58,10 +58,10 @@ Google Chrome ver53.0.2785.116 (64-bit)
 [DEMO page](https://codepen.io/nakazu/pen/jVEePj)
 
 
-##Tutorial
+## Tutorial
 Followings are the basic workflow of KnockIn.js. You can design sequences by running the programs without external library.
 
-###1.Setting Sequence
+### 1.Setting Sequence
 Create a 'designCRISPITCh' instance using `var <instance> new	designCRISPITCh()`
 ```
 Usage: designCRISPITCh(inputTitle, inputSeq, shiftedFrameNum, inputtargetedPos)
@@ -91,7 +91,7 @@ Arguments:
                     "targetedPos"     -- Target position
 ```
 
-###2.Setting Design Method
+### 2.Setting Design Method
 
 Set the design method using `<instance>.setMethod()` method
 ```
@@ -112,7 +112,7 @@ Arguments:
 
 The design program will not work without setting the design method. We recommend checking method setting using `<instance>.hasMethod()` method. If this is okay, the method returns `true`.
 
-###3.Designing Sequences
+### 3.Designing Sequences
 
 Design sequences for KnockIn using `<instance>.createDesign()` method
 ```
@@ -124,14 +124,14 @@ Arguments:
  requestedDraftNum <Number:integer> The number of searching gRNA targeting sites (default: 10000)
 ```
 
-####Design Algorithm
+#### Design Algorithm
 
 ![searchgrna](https://github.com/Kazuki-Nakamae/public/blob/master/KnockIn.js/images/searchgrna.jpg "searchgrna")
 
 This program searches PAM sequences within the range of 6 bp for both upstream and downstream of selected base and designs microhomology arms in accordance with the design method.
 For the detailed explanation, please refer to the "[PITCh KnockIn](http://www.mls.sci.hiroshima-u.ac.jp/smg/PITChdesigner/index.html)" page.
 
-###4.Showing Result
+### 4.Showing Result
 
 Get result using `<instance>.retrieveDesign()` method.
 
@@ -160,17 +160,17 @@ Arguments:
  designedDraftNo <Number:integer> id number in design dataset(from 0)
 ```
 
-###Supplements
+### Supplements
 
-####List Of Classess and function in KnockIn.js
+#### List Of Classess and function in KnockIn.js
 
 KnockIn.js has many methods. For the detailed explanation, please refer to the source code.
 
-#####Function
+##### Function
 ```
 setInherits(childCtor,parentCtor)
 ```
-#####"inputSequence" Class
+##### "inputSequence" Class
 ```
 //Constructor
 inputSequence(inputTitle,inputSeq,shiftedFrameNum,inputtargetedPos)
@@ -183,7 +183,7 @@ inputSequence.getCompBase(inputBase,getNucType)
 inputSequence.isSameBase_(inputBase,refBase)
 inputSequence.convertCodon(inputCodon)
 ```
-#####"designCRISPITCh" Class(subclass from "inputSequence" Class)
+##### "designCRISPITCh" Class(subclass from "inputSequence" Class)
 ```
 //Constructor
 designCRISPITCh(inputTitle,inputSeq,shiftedFrameNum,inputtargetedPos)
